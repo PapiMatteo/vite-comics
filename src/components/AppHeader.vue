@@ -85,8 +85,8 @@ ul {
     li {
         &:hover{
             a {
-                color: $navColor;
-                border-bottom: 5px solid $navColor;
+                color: $primaryColor;
+                border-bottom: 5px solid $primaryColor;
                 padding-bottom: 36px;
             }
         }
@@ -95,8 +95,8 @@ ul {
 }
 
 .active {
-    color: $navColor;
-    border-bottom: 5px solid $navColor;
+    color: $primaryColor;
+    border-bottom: 5px solid $primaryColor;
     padding-bottom: 36px;
 }
 
