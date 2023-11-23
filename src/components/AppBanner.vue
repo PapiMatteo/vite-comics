@@ -13,17 +13,22 @@ export default {
                 },
                 {
                     img: 'buy-comics-shop-locator.png',
-                    text: 'SUBSCRIPTION'
+                    text: 'COMIC SHOP LOCATOR'
                 },
                 {
-                    img: 'buy-comics-comics-subscription.png',
-                    text: 'COMIC SHOP LOCATOR'
+                    img: 'buy-comics-subscriptions.png',
+                    text: 'SUBSCRIPTION'
                 },
                 {
                     img: 'buy-dc-power-visa.svg',
                     text: 'DC POWER VISA'
                 }
             ]
+        }
+    },
+    methods: {
+        getImagePath(img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
         }
     }
 }
@@ -33,7 +38,7 @@ export default {
     <div class="banner">
         <div class="small-container">
             <ul>
-                <li v-for="item in listItems" :key="item.text"><img :src="`../assets/img/${item.img}`" alt=""><a href="">{{ item.text }}</a></li>
+                <li v-for="item in listItems" :key="item.text"><a href=""><img :src="getImagePath(item.img)" alt="">{{ item.text }}</a></li>
             </ul>
         </div>
     </div>
@@ -58,9 +63,15 @@ ul {
     padding-top: 2rem;
     list-style-type: none;
     gap: 1rem;
-
+ 
     a {
+        @include flex(row, space-between);
+        gap: .5rem;
         color: white;
+        text-decoration: none;
+        img {
+            width: 50px;
+        }
     }
     
 }
