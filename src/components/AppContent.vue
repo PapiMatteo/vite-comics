@@ -16,8 +16,11 @@ export default {
 <style lang="scss" scoped>
 
 .content {
+    min-height: 150px;
     background-color: #1c1c1c;
     color: white;
+    display: flex;
+    align-items: center;
 }
 
 </style>
