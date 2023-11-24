@@ -20,7 +20,7 @@ export default {
 
                 </div>
                 
-                <img src="../assets/img/dc-logo-bg.png" alt="" class="footer-logo">
+                <div class="bg-logo"></div>
             </div>
             
         </div>
@@ -33,8 +33,15 @@ export default {
 
 .footer-nav {
     background-image: url('../assets/img/footer-bg.jpg');
-    background-size: contain;
+    background-size: cover;
     min-height: 200px;   
+}
+
+.bg-logo {
+    background-image: url('../assets/img/dc-logo-bg.png');
+    background-size: contain;
+    width: 400px;
+    height: 400px
 }
 
 .footer-content {

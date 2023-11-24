@@ -43,7 +43,8 @@ export default {
 
 <template>
     
-    <header>
+    <header class="header">
+        <div class="header-top"></div>
         <div class="container">
             <img src="../assets/img/dc-logo.png" alt="Logo DC Comics">
 
@@ -59,9 +60,12 @@ export default {
 @use "../style/partials/mixins" as *;
 @use "../style/partials/variables" as *;
 
-header {
-    height: 100px;
-
+.header {
+    height: 130px;
+    &-top {
+        background-color: #1c1c1c;
+        height: 30px;
+    }
     img {
         width: 80px;
     }
@@ -73,7 +77,7 @@ header {
 }
 
 ul {
-    @include flex();
+    @include flex(row, space-between, stretch);
     list-style: none;
     gap: 1.2rem;
 
